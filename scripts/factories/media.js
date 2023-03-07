@@ -24,7 +24,7 @@ function mediaFactory(data) {
     /* gestion des videos */
     if (video) {
       mediaCard.innerHTML = `
-            <video class="media-miniature" autoplay>
+            <video class="media-miniature" >
                 <source src="../../assets/images/medias/${video}" type="video/mp4">
                 <p>Impossible d'afficher ce media sur votre navigateur.</p>
             </video>
