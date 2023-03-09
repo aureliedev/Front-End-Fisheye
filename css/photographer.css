@@ -331,6 +331,11 @@ textarea {
   transform: rotate(180deg);
 }
 
+/****** FOCUS ACCESSIBILITÉ **********/
+:focus {
+  outline: 2px solid blue;
+}
+
 /****** RESPONSIVE **********/
 
 @media screen and (max-width: 992px) {
