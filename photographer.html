@@ -20,16 +20,17 @@
   </header>
   <main id="main">
     <section class="photograph-header">
-      <button class="contact_button focusable-element">Contactez-moi</button>
+      <button class="contact_button focusable-element" tabindex="0">Contactez-moi</button>
     </section>
     <!-- systeme de tri -->
     <section class="sort-section">
-      <p>Trier par : </p>
-      <div role="button" id="sortSystem" title="Trier les medias" class="custom-select" tabindex="0">
+      <p>Trier par :</p>
+      <div role="listbox" id="sortSystem" title="Trier les medias" class="custom-select" tabindex="0"
+        aria-label="Trier les médias" aria-activedescendant="sortOption0">
         <i class="arrow fa-solid fa-chevron-down"></i>
-        <div role="button" class="custom-select-option visible" data-value="likes">Popularité</div>
-        <div role="button" class="custom-select-option" data-value="date">Date</div>
-        <div role="button" class="custom-select-option" data-value="title">Titre</div>
+        <div role="option" class="custom-select-option visible" data-value="likes" id="sortOption0">Popularité</div>
+        <div role="option" class="custom-select-option" data-value="date" id="sortOption1">Date</div>
+        <div role="option" class="custom-select-option" data-value="title" id="sortOption2">Titre</div>
       </div>
     </section>
 
@@ -43,7 +44,8 @@
     <div class="modal">
       <header>
         <h2>Contactez-moi</h2>
-        <img src="assets/icons/close.svg" class="close_button" role="button" alt="Fermer la pop-up" tabindex="0" />
+        <img src="assets/icons/close.svg" class="close_button" role="button" alt="Fermer la pop-up" tabindex="0"
+          aria-label="Fermer la pop-up" />
       </header>
       <form>
         <div>
@@ -71,7 +73,7 @@
     <div class="carousel">
       <i class="close-carousel fa-solid fa-xmark" role="button" tabindex="0"></i>
       <div class="left-panel">
-        <i class="previous-slide fa-solid fa-chevron-left" role="button" tabindex="0"></i>
+        <i class="previous-slide fa-solid fa-chevron-left" role="button" tabindex="0" aria-label="Précédent"></i>
       </div>
       <div class="carousel-media-container">
         <img src="" alt="">
@@ -82,7 +84,7 @@
         <h2>Titre de l image</h2>
       </div>
       <div class="right-panel">
-        <i class="next-slide fa-solid fa-chevron-right" role="button" tabindex="0"></i>
+        <i class="next-slide fa-solid fa-chevron-right" role="button" tabindex="0" aria-label="Suivant"></i>
       </div>
     </div>
   </div>
