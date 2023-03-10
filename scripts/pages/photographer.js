@@ -120,10 +120,20 @@ async function displayMedias(medias) {
     likeButton.addEventListener("click", (e) => {
       liked = !liked;
       likeMedia(e, media, liked, mediaCard, totalLikes);
+      if (liked) {
+        likeButton.querySelector("i").classList.add("fas");
+      } else {
+        likeButton.querySelector("i").classList.remove("fas");
+      }
     });
     likeButton.addEventListener("keypress", (e) => {
       liked = !liked;
       likeMedia(e, media, liked, mediaCard, totalLikes);
+      if (liked) {
+        likeButton.querySelector("i").classList.add("fas");
+      } else {
+        likeButton.querySelector("i").classList.remove("fas");
+      }
     });
 
     mediaCard.setAttribute("tabindex", 0);
