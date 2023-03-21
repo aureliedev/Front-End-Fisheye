@@ -1,3 +1,5 @@
+/********** Media factory **********/
+
 /*  Fonction mediaFactory pr la data */
 function mediaFactory(data) {
   const { id, image, likes, price, title, date, photographerId, video } = data;

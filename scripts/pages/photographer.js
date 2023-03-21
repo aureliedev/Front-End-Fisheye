@@ -1,4 +1,4 @@
-//Mettre le code JavaScript lié à la page photographer.html
+/********** page des photographes **********/
 
 let params = new URL(document.location).searchParams;
 let photographerId = params.get("id");
@@ -11,7 +11,7 @@ console.log(photographerId);
 const mediaContainer = document.querySelector(".media-container");
 let selectedOption = "likes";
 
-/********** Custom select input **********/
+/********** Sélection personnalisée input **********/
 
 const customSelect = document.querySelector(".custom-select");
 const arrow = document.querySelector(".arrow");
@@ -107,6 +107,7 @@ async function displayPhotographerData(photographer) {
   mediasContainer.classList.add("media-container");
 }
 
+/**  Affiche la data des medias */
 async function displayMedias(medias) {
   medias.forEach((media, index) => {
     totalLikes += media.likes;
@@ -116,6 +117,7 @@ async function displayMedias(medias) {
     const medialModel = mediaFactory(media);
     const mediaCard = medialModel.getPhotographerMediaCards();
 
+    /** gestion des likes */
     const likeButton = mediaCard.querySelector(".likes");
     likeButton.addEventListener("click", (e) => {
       liked = !liked;
@@ -154,7 +156,7 @@ async function displayMedias(medias) {
   });
 }
 
-/** fonction init **/
+/** fonction init affiche les photographes sur la page photographes lors du chargement de la page **/
 async function init() {
   const photographer = await getPhotographers();
   const medias = await getPhotographerMedias();

@@ -1,3 +1,6 @@
+/**********  Gestion du formulaire de contact  *******/
+
+/** DOM **/
 const body = document.querySelector("body");
 const header = document.querySelector("header");
 const main = document.querySelector("main");
@@ -29,6 +32,7 @@ form.addEventListener("submit", (e) => {
   sendForm();
 });
 
+/** afficher le formulaire de contact */
 function displayModal() {
   body.style.overflow = "hidden";
   modal.style.display = "block";
@@ -40,6 +44,7 @@ function displayModal() {
   firstNameInput.focus();
 }
 
+/** fermer le formulaire de contact */
 function closeModal() {
   body.style.overflow = "scroll";
   modal.style.display = "none";
@@ -49,6 +54,7 @@ function closeModal() {
   focusableElements.forEach((element) => element.setAttribute("tabindex", 0));
 }
 
+/** envoi du formulaire de contact */
 function sendForm() {
   const sendDatas = {
     firstname: firstNameInput.value,
@@ -60,7 +66,7 @@ function sendForm() {
   closeModal();
   clearFields();
 }
-
+/** effacer les champs lors de l'envoi du formulaire */
 function clearFields() {
   firstNameInput.value = "";
   nameInput.value = "";

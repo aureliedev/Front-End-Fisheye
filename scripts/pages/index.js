@@ -1,3 +1,6 @@
+/*********** page index (homePage) **********/
+
+/*** retourne la data des photographes *****/
 async function getPhotographers() {
   const data = await (await fetch("../../data/photographers.json")).json();
   console.log("data", data);
@@ -5,6 +8,7 @@ async function getPhotographers() {
   return { photographers: [...photographers] };
 }
 
+/*** affiche les photographes sur la page d'index *****/
 async function displayData(photographers) {
   const photographersSection = document.querySelector(".photographer_section");
 
@@ -21,6 +25,7 @@ async function displayData(photographers) {
   });
 }
 
+/*** affiche les photographes sur la page index lors du chargement de la page ****/
 async function init() {
   // Récupère les datas des photographes
   const { photographers } = await getPhotographers();

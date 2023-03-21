@@ -1,3 +1,5 @@
+/********** Photographer factory **********/
+
 /* fonction photographerFactory pr la data */
 function photographerFactory(data) {
   const { name, portrait, city, country, id, price, tagline } = data;
